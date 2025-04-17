@@ -3,7 +3,7 @@ import Grid from "../../assets/grid.svg";
 import MagicButton from "../../commons/MagicButton";
 import { FaDownload } from "react-icons/fa6";
 import { FiSend } from "react-icons/fi";
-import cv from "../../assets/cv.pdf";
+import cv from "../../assets/Rabeeh-CV.pdf";
 import useScroll from "../../hooks/useScroll";
 import BlobSvg from "../../assets/blob.svg";
 import ME from "../../assets/me.png";
