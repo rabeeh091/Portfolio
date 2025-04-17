@@ -1,0 +1,92 @@
+header{
+    height: 100%;
+    min-width: 100vh;
+    padding-top: 9rem;
+    position: relative;
+}
+header .grid-kit{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.gradient-text {
+    background: linear-gradient(90deg, #3f87a6, #8e44ad, #ff6ec4);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-weight: bold;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }  
+  
+header .header__container{
+    display: grid;
+    grid-template-columns: auto 400px;
+    gap: 20px;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+header .header__container .magic-button{
+    display: flex;
+    margin: 20px auto;
+}
+
+
+/* ====== Me ====== */
+header .me{
+    position: relative;
+}
+header .me img{
+    position: relative;
+    z-index: 2;
+    top: -70px;
+}
+header .me .blob{
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    position: absolute;
+    z-index: 1;
+}
+header .me::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 2;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--bg-primary),
+        var(--bg-primary)
+    );
+}
+
+/* ====== Responsive ====== */
+@media only screen and (min-width:1400px) {
+    header{
+        min-height: auto;
+    }
+}
+@media only screen and (max-width:900px){
+    header .header__container{
+        grid-template-columns: 100%;
+    }
+}
